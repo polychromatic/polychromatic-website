@@ -5,21 +5,21 @@ permalink: /features/
 class: features
 
 features:
+    - title: Design Custom Effects
+      image: /assets/img/features/editor.png
+      text: "Created in pixels and frames. Make static or animated mappings for your game, application, or ambience."
+
     - title: Configure Firmware
       image: /assets/img/features/options.svg
       text: Provides a frontend for hardware features like built-in effects, brightness, DPI and polling interval.
-
-    - title: Tray Applet Support
-      image: /assets/img/features/interfaces.svg
-      text: "Quickly change your device settings and lighting on compatible desktop environments. *"
 
     - title: Inspect Device Info
       image: /assets/img/features/device-info.png
       text: Find out the firmware version, serial number and test individually addressable LEDs.
 
-    - title: Design Custom Effects
-      image: /assets/img/features/editor.png
-      text: "Created in pixels and frames. Make static or animated mappings for your game, application, or ambience."
+    - title: Tray Applet Support
+      image: /assets/img/features/interfaces.svg
+      text: "Quickly change your device settings and lighting on compatible desktop environments. *"
 
     - title: Troubleshooter Included
       image: /assets/img/features/troubleshooter.png
