@@ -26,12 +26,6 @@ image_box:
       alt: Screenshot of Polychromatic's tray applet
       summary: Quickly change settings from your desktop's system tray
 
-    - label: Command Line
-      icon: /assets/fa/terminal.svg
-      image: /assets/img/homepage/cli.png
-      alt: Screenshot of the terminal running polychromatic-cli
-      summary: For those that work in the terminal or set lighting via scripts
-
 features:
     - title: Compatible with OpenRazer
       image: /assets/img/logo/openrazer.svg

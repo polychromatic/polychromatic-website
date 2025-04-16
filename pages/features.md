@@ -9,9 +9,9 @@ features:
       image: /assets/img/features/options.svg
       text: Provides a frontend for hardware features like built-in effects, brightness, DPI and polling interval.
 
-    - title: Controller, Tray or Terminal
+    - title: Tray Applet Support
       image: /assets/img/features/interfaces.svg
-      text: "Accessible via 3 interfaces:<br>The main application, tray applet`*`, or command line."
+      text: "Quickly change your device settings and lighting on compatible desktop environments. *"
 
     - title: Inspect Device Info
       image: /assets/img/features/device-info.png
