@@ -107,6 +107,7 @@ function loadDeviceList(backend_id, devices_url, version_url) {
     if (!table)
         return;
 
+    const tbody = table.querySelector('tbody') || table;
     const requestDevices = new XMLHttpRequest();
     const requestVersion = new XMLHttpRequest();
 
@@ -124,7 +125,7 @@ function loadDeviceList(backend_id, devices_url, version_url) {
 
             devices.forEach(function(device) {
                 const formfactor = device.type.charAt(0).toUpperCase() + device.type.slice(1);
-                const row = table.insertRow(-1);
+                const row = tbody.insertRow(-1);
 
                 const name = row.insertCell(0);
                 name.innerHTML = `<img src="/assets/img/formfactor/${device.type}.svg" title="${formfactor}"/> ${device.name}`;
