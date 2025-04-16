@@ -29,7 +29,7 @@ image_box:
 features:
     - title: Compatible with OpenRazer
       image: /assets/img/logo/openrazer.svg
-      text: "Supporting over 120 devices, including: keyboards, mice, mouse mats and headsets."
+      text: "Supporting over 210 devices, including: keyboards, mice, mouse mats and headsets."
       button:
         label: View Supported Devices
         url: /devices/
