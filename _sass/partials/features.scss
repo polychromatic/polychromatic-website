@@ -41,8 +41,10 @@
     .feature-text {
         display: flex;
         flex-direction: column;
+        margin: auto;
         margin-top: 0;
-        margin-bottom: auto;
+        margin-left: 0;
+        max-width: 360px;
     }
 
     .feature-image-wrapper img {
@@ -76,6 +78,11 @@
 
             .feature-text-wrapper {
                 text-align: right;
+            }
+
+            .feature-text {
+                margin-left: auto;
+                margin-right: 0;
             }
 
             .btn {
