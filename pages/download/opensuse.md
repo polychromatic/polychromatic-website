@@ -10,13 +10,14 @@ distro_accent: '115,186,37'
 order: 3
 ---
 
-> Due to a packaging issue, Leap 15.6 is not supported at the moment.
-
 ### One Click Install
 
 [![](/assets/img/distros/opensuse.svg) Tumbleweed](https://software.opensuse.org/ymp/hardware:razer/openSUSE_Tumbleweed/polychromatic.ymp){:.btn}
 [![](/assets/img/distros/opensuse.svg) Leap 15.5](https://software.opensuse.org/ymp/hardware:razer/openSUSE_Leap_15.5/polychromatic.ymp){:.btn}
 [![](/assets/img/distros/opensuse.svg) Leap 15.6](){:.btn .disabled}
+
+{:.warning}
+> Native packages are **not available for Leap 15.6** because some required software (dependencies) are missing. Consider the [Flatpak](/download/flatpak) version for Leap 15.6.
 
 ### Or... using the Terminal
 
