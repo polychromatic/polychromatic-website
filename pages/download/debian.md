@@ -21,7 +21,6 @@ curl -fsSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xc0d54c34d001
 sudo apt-get update
 
 sudo apt install polychromatic
-
 ```
 {% endcapture %}
 
@@ -71,6 +70,6 @@ Packages and dependencies are compatible and tested between Debian and Ubuntu.
 
 The series are mapped as follows:
 
-* `focal` for Debian 10 "Buster" (Qt 5)
 * `jammy` for Debian 11 "Bullseye" (Qt 5)
 * `noble` for Debian 12 "Bookworm" (Qt 6)
+* `noble` for Debian 13 "Bookworm" (Qt 6)
