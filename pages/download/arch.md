@@ -81,10 +81,10 @@ to succeed, for example:
 sudo pacman -S linux-headers
 ```
 
-You'll need to add your user to the `plugdev` group. Reboot afterwards for changes to take effect.
+You'll need to add your user to the `openrazer` group. Reboot afterwards for changes to take effect.
 
 ```shell
-sudo gpasswd -a $USER plugdev
+sudo gpasswd -a $USER openrazer
 ```
 
 [suitable kernel headers]: https://archlinux.org/packages/?sort=&repo=Core&repo=Extra&q=linux+-headers&maintainer=&flagged=
