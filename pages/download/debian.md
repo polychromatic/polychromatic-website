@@ -10,7 +10,11 @@ distro_accent: '215,7,81'
 order: 1
 ---
 
-{% capture stable %}
+{:.warning}
+> **Debian 13 and later no longer accept the SHA-1 signing key as of February 2026.**
+>
+> Check back here later this month after we build a new repository.
+> The one hosted on Launchpad will continue to work until February 2026.
 
 To add the repository and install, open the Terminal:
 
@@ -22,30 +26,6 @@ sudo apt-get update
 
 sudo apt install polychromatic
 ```
-{% endcapture %}
-
-{% capture preview %}
-
-Get the latest changes in development from the [master branch](https://github.com/polychromatic/polychromatic/commits/master).
-
-```shell
-echo "deb [signed-by=/usr/share/keyrings/polychromatic.gpg] http://ppa.launchpad.net/polychromatic/preview/ubuntu noble main" | sudo tee /etc/apt/sources.list.d/polychromatic.list
-curl -fsSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xc0d54c34d00160459588000e96b9cd7c22e2c8c5' | sudo gpg --dearmour -o /usr/share/keyrings/polychromatic.gpg
-
-sudo apt-get update
-
-sudo apt install polychromatic
-```
-
-This repository is automatically uploaded when the tests pass.
-
-{% endcapture %}
-
-{% include partials/download-tabs.html
-    stable=stable
-    preview=preview
-%}
-
 
 ### OpenRazer
 
