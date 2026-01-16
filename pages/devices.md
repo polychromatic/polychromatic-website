@@ -18,9 +18,3 @@ directly control RGB hardware.
 This project only supports [OpenRazer] at the moment.
 
 [OpenRazer]: https://openrazer.github.io
-
-> **Device not listed?**
->
-> Check the relevant project's README for details on device support. Usually, this
-> involves creating an issue (unless one already exists). If you feel like hacking,
-> consider implementing support yourself and creating a pull request.
