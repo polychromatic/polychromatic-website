@@ -11,16 +11,20 @@ order: 1
 ---
 
 {:.warning}
-> **Debian 13 and later no longer accept the SHA-1 signing key as of February 2026.**
+> **Repository updated for Debian 13 onwards**
 >
-> Check back here later this month after we build a new repository.
-> The one hosted on Launchpad will continue to work until February 2026.
+> Debian 13 "Trixie" no longer accepts the SHA-1 signing key as of February 2026.
+> We've created a new repository for Debian to replace the Launchpad one.
+>
+> If you use Debian 12 "Bookworm" or earlier, the Launchpad repository will continue to work.
 
 To add the repository and install, open the Terminal:
 
 ```shell
-echo "deb [signed-by=/usr/share/keyrings/polychromatic.gpg] http://ppa.launchpad.net/polychromatic/stable/ubuntu noble main" | sudo tee /etc/apt/sources.list.d/polychromatic.list
-curl -fsSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xc0d54c34d00160459588000e96b9cd7c22e2c8c5' | sudo gpg --dearmour -o /usr/share/keyrings/polychromatic.gpg
+curl -fsSL 'https://debian.polychromatic.app/key.asc' | sudo gpg --dearmour -o /usr/share/keyrings/polychromatic.gpg
+
+source /etc/os-release
+echo "deb [signed-by=/usr/share/keyrings/polychromatic.gpg] https://debian.polychromatic.app $VERSION_CODENAME main" | sudo tee /etc/apt/sources.list.d/polychromatic.list
 
 sudo apt-get update
 
@@ -29,27 +33,22 @@ sudo apt install polychromatic
 
 ### OpenRazer
 
-OpenRazer is in the [official Debian repositories], but it can be a few versions behind.
-If you need to use a device, feature or fix that was [released in a newer version], add [OpenRazer's repository for Debian].
+OpenRazer is in the [official Debian repositories], but it could be a few versions behind.
 
-You'll need to add your user to the `plugdev` group. Reboot afterwards for changes to take effect.
+```shell
+sudo apt install openrazer-meta
+```
+
+For the [latest device support and fixes], we'd recommend adding [OpenRazer's Debian repository].
+
+You'll need to add your user to the `plugdev` group.
 
 ```shell
 sudo gpasswd -a $USER plugdev
 ```
 
+Reboot afterwards for changes to take effect.
+
 [official Debian repositories]: https://packages.debian.org/search?keywords=openrazer
-[released in a newer version]: https://github.com/openrazer/openrazer/releases
-[OpenRazer's repository for Debian]: https://software.opensuse.org/download.html?project=hardware%3Arazer&package=openrazer-meta
-
-
-### About the repository
-
-Launchpad acts as the repository host for this package archive.
-Packages and dependencies are compatible and tested between Debian and Ubuntu.
-
-The series are mapped as follows:
-
-* `jammy` for Debian 11 "Bullseye" (Qt 5)
-* `noble` for Debian 12 "Bookworm" (Qt 6)
-* `noble` for Debian 13 "Bookworm" (Qt 6)
+[latest device support and fixes]: https://github.com/openrazer/openrazer/releases
+[OpenRazer's Debian repository]: https://software.opensuse.org/download.html?project=hardware%3Arazer&package=openrazer-meta
