@@ -83,6 +83,7 @@
 /* Copy button for code blocks */
 pre {
     position: relative;
+    white-space: break-spaces;
 
     &.copied {
         animation: pre-block-copied 0.75s ease-in-out forwards;
