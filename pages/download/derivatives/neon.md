@@ -9,4 +9,6 @@ distro_accent: '22,148,126'
 distro_icon: kde-neon.svg
 order: 65
 inherits: Ubuntu
+
+view_on_openrazer: https://openrazer.github.io/#ubuntu
 ---

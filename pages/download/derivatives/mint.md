@@ -9,4 +9,6 @@ distro_accent: '135,207,62'
 distro_icon: mint.svg
 order: 10
 inherits: Ubuntu
+
+view_on_openrazer: https://openrazer.github.io/#ubuntu
 ---

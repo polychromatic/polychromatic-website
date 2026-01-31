@@ -231,3 +231,25 @@
         }
     }
 }
+
+.view-externally {
+    font-size: 0.8rem;
+
+    svg {
+        height: 0.9em;
+        width: 0.9em;
+        vertical-align: middle;
+        margin-left: 0.1em;
+        margin-right: 0.25em;
+
+        path {
+            fill: $primary;
+        }
+    }
+
+    &:hover {
+        svg path {
+            fill: $secondary;
+        }
+    }
+}

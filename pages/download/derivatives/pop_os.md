@@ -9,4 +9,6 @@ distro_accent: '58,148,159'
 distro_icon: pop_os.png
 order: 25
 inherits: Ubuntu
+
+view_on_openrazer: https://openrazer.github.io/#ubuntu
 ---

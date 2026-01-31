@@ -8,6 +8,8 @@ distro_name: Fedora
 distro_icon: fedora.svg
 distro_accent: '81,162,218'
 order: 2
+
+view_on_openrazer: https://openrazer.github.io/#fedora
 ---
 
 To add the repository, open the Terminal:
@@ -45,5 +47,3 @@ You'll need to add your user to the `plugdev` group. Reboot afterwards for chang
 ```shell
 sudo gpasswd -a $USER plugdev
 ```
-
-Alternate options can be found on the [openSUSE Build Service](https://software.opensuse.org/download.html?project=hardware%3Arazer&package=polychromatic).

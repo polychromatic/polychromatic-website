@@ -10,6 +10,8 @@ distro_icon: raspberry_pi.svg
 legal: "Raspberry Pi logo is a trademark of the Raspberry Pi Foundation."
 order: 35
 inherits: Debian
+
+view_on_openrazer: https://openrazer.github.io/#debian
 ---
 
 Raspberry Pi OS is based on Debian.

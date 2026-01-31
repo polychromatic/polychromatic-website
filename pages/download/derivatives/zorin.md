@@ -9,4 +9,6 @@ distro_accent: '0,142,204'
 distro_icon: zorin_os.png
 order: 75
 inherits: Ubuntu
+
+view_on_openrazer: https://openrazer.github.io/#ubuntu
 ---

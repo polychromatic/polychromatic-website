@@ -8,6 +8,8 @@ distro_name: Debian
 distro_icon: debian.svg
 distro_accent: '215,7,81'
 order: 1
+
+view_on_openrazer: https://openrazer.github.io/#debian
 ---
 
 {:.warning}
@@ -39,8 +41,6 @@ OpenRazer is in the [official Debian repositories], but it could be a few versio
 sudo apt install openrazer-meta
 ```
 
-For the [latest device support and fixes], we'd recommend adding [OpenRazer's Debian repository].
-
 You'll need to add your user to the `plugdev` group.
 
 ```shell
@@ -49,6 +49,7 @@ sudo gpasswd -a $USER plugdev
 
 Reboot afterwards for changes to take effect.
 
+For the [latest device support and fixes], we'd recommend using OpenRazer's own repository.
+
 [official Debian repositories]: https://packages.debian.org/search?keywords=openrazer
 [latest device support and fixes]: https://github.com/openrazer/openrazer/releases
-[OpenRazer's Debian repository]: https://software.opensuse.org/download.html?project=hardware%3Arazer&package=openrazer-meta

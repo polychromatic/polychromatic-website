@@ -9,6 +9,8 @@ distro_icon: slackware.svg
 distro_accent: '73,98,174'
 community_package: true
 order: 55
+
+view_on_openrazer: https://openrazer.github.io/#slackware
 ---
 
 Users of Slackware 15.0 can install the software via this community repository:
@@ -16,3 +18,5 @@ Users of Slackware 15.0 can install the software via this community repository:
 > <https://www.slackbuilds.org/repository/15.0/system/polychromatic/>
 
 For more information, please see <https://www.slackbuilds.org/howto/>.
+
+## OpenRazer

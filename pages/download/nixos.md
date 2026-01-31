@@ -9,6 +9,8 @@ distro_icon: nixos.svg
 distro_accent: '82,119,195'
 community_package: true
 order: 45
+
+view_on_openrazer: https://openrazer.github.io/#nixos
 ---
 
 Members of the NixOS community [maintain a package of Polychromatic.](https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/polychromatic/default.nix)
@@ -32,3 +34,5 @@ Then rebuild your system:
 ```shell
 sudo nixos-rebuild switch
 ```
+
+## OpenRazer

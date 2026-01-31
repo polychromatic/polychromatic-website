@@ -8,6 +8,8 @@ distro_name: Ubuntu
 distro_icon: ubuntu.svg
 distro_accent: '225,63,32'
 order: 4
+
+view_on_openrazer: https://openrazer.github.io/#ubuntu
 ---
 
 {% capture stable %}

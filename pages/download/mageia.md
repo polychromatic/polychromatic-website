@@ -8,6 +8,8 @@ distro_name: Mageia
 distro_icon: mageia.svg
 distro_accent: '35,151,212'
 order: 70
+
+view_on_openrazer: https://openrazer.github.io/#mageia
 ---
 
 To add the repository, open the Terminal:
@@ -35,5 +37,3 @@ You'll need to add your user to the `plugdev` group. Reboot afterwards for chang
 ```shell
 sudo gpasswd -a $USER plugdev
 ```
-
-Alternate options can be found on the [openSUSE Build Service](https://software.opensuse.org/download.html?project=hardware%3Arazer&package=polychromatic).

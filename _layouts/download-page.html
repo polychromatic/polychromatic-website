@@ -27,6 +27,13 @@ layout: default
                 {%- endfor -%}
             {% endif %}
 
+            {% if page.view_on_openrazer %}
+                <a class="view-externally" href="{{ page.view_on_openrazer }}" target="_blank" rel="noopener external">
+                    {% include svg/link.svg -%}
+                    See instructions on OpenRazer's website
+                </a>
+            {% endif %}
+
         </div>
 
     </div>
