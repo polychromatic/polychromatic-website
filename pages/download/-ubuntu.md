@@ -26,7 +26,8 @@ sudo apt install polychromatic
 
 {% capture preview %}
 
-Get the latest changes in development from the [master branch](https://github.com/polychromatic/polychromatic/commits/master).
+Latest changes from the [master branch](https://github.com/polychromatic/polychromatic/commits/master)
+appear here shortly after passing automated tests.
 
 ```shell
 sudo add-apt-repository ppa:openrazer/daily
@@ -35,8 +36,6 @@ sudo apt update
 
 sudo apt install polychromatic
 ```
-
-This repository is automatically uploaded when the tests pass.
 
 {% endcapture %}
 
