@@ -13,7 +13,7 @@ order: 45
 view_on_openrazer: https://openrazer.github.io/#nixos
 ---
 
-Members of the NixOS community [maintain a package of Polychromatic.](https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/polychromatic/default.nix)
+Members of the NixOS community [maintain a package of Polychromatic.](https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/po/polychromatic/package.nix)
 
 ### With a command
 
