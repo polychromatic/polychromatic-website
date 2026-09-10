@@ -40,9 +40,6 @@ features:
 {:.center}
 ![Pipeline indicators](/assets/img/features/pipeline.svg)
 
-{:.center}
-[Check out the Roadmap](https://docs.polychromatic.app/roadmap/){:.btn .ext}
-
 {:.center .grey}
 To learn more about the project, visit the
 [documentation website](https://docs.polychromatic.app) (accessible via "Docs" tab in the top-left)
