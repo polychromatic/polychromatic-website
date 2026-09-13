@@ -20,7 +20,8 @@
 
     {% assign timestamp = site.time | date: '%s' %}
     <link rel="stylesheet" href="/assets/lib/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="/assets/polychromatic.css?{{ timestamp }}">
+    <link rel="stylesheet" href="/assets/polychromatic-base.css?{{ timestamp }}">
+    <link rel="stylesheet" href="/assets/polychromatic-website.css?{{ timestamp }}">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 

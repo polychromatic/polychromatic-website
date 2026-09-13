@@ -1,0 +1,733 @@
+/*
+ * Website-specific styling for the Polychromatic main site.
+
+ * Copyright (C) 2017-2026 Luke Horwell <code (at) horwell.me>
+*/
+
+:root {
+    --splash-height: calc(40vh + var(--header-height));
+    --splash-margin-top: calc(var(--header-height) * -1);
+
+    --tab-focus-border: #2c2c2c;
+    --tab-focus-text: #e6e6e6;
+    --red-light: #ff8080;
+
+    --image-box-min-height: 380px;
+}
+
+/******************************
+* Error Page
+******************************/
+#error-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    background-color: black;
+    background-image: url(/assets/img/error.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#error-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 6em;
+    padding: 1em 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.85);
+
+    h3 {
+        font-size: 2em;
+        margin: 0;
+        margin-bottom: 0.25em;
+        color: red;
+    }
+
+    p {
+        font-size: 1em;
+        margin: 0;
+    }
+}
+
+
+/******************************
+* Splash
+******************************/
+.splash {
+    height: var(--splash-height);
+    background: black;
+    overflow: hidden;
+    position: relative;
+    font-size: 1.1em;
+    margin-top: var(--splash-margin-top);
+    margin-bottom: 4em;
+
+    h2 {
+        color: white;
+    }
+
+    .chroma-backdrop {
+        height: var(--splash-height);
+        pointer-events: none;
+
+        .chroma-ring {
+            position: absolute;
+            height: 150vh;
+            top: -65vh;
+            left: -5vw;
+            animation: rotate 5s linear infinite;
+        }
+    }
+}
+
+.splash-details {
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    position: absolute;
+    left: 50vw;
+    top: var(--header-height);
+    bottom: 0;
+    right: 0;
+    max-width: 720px;
+    padding: 1em 2em;
+}
+
+.splash-details-inner {
+    margin: auto 0;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@media (min-width: 721px) {
+    .splash-details {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 720px) {
+    .splash-details {
+        left: 0;
+    }
+}
+
+
+/******************************
+* Tabs
+******************************/
+.tab-container {
+    margin: 30px 0;
+}
+
+.tabs {
+    display: flex;
+}
+
+.btn-tab {
+    background: var(--bg-secondary-light);
+    border: 1px solid var(--table-colour);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    padding: 8px 12px;
+    margin: 0;
+    outline: 0;
+
+    &:hover,
+    &:focus {
+        border-color: var(--tab-focus-border);
+        color: var(--tab-focus-text);
+        border-bottom-color: transparent;
+    }
+
+    &:disabled {
+        pointer-events: none;
+        color: var(--grey-colour);
+    }
+
+    img {
+        filter: grayscale(1);
+        max-height: 15px;
+        min-width: 15px;
+        vertical-align: middle;
+    }
+
+    span {
+        padding-left: 5px;
+    }
+}
+
+.tab-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--table-colour);
+    display: none;
+    margin: -1px 0;
+    padding: 10px;
+}
+
+#radio-download-stable:checked ~ .tabs #btn-tab-stable,
+#radio-download-preview:checked ~ .tabs #btn-tab-preview {
+    background: var(--bg-secondary);
+    color: var(--primary);
+    cursor: default;
+    border-color: var(--primary);
+    border-bottom-color: transparent;
+}
+
+#radio-download-stable:checked ~ .tabs #btn-tab-stable img,
+#radio-download-preview:checked ~ .tabs #btn-tab-preview img {
+    filter: grayscale(0);
+}
+
+#radio-download-stable:checked ~ #tab-content-stable,
+#radio-download-preview:checked ~  #tab-content-preview {
+    display: block;
+}
+
+
+/******************************
+* Layout: Devices
+******************************/
+.device-list-info {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-colour);
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.device-backend-links {
+    .link {
+        display: inline-flex;
+        margin-right: 2em;
+    }
+
+    svg {
+        height: 16px;
+        width: 16px;
+        margin: auto 0.25em;
+
+        path {
+            fill: var(--primary);
+        }
+    }
+}
+
+.device-table {
+    img {
+        height: 24px;
+        width: 24px;
+        vertical-align: middle;
+    }
+}
+
+
+/******************************
+* Layout: Downloads / Distro
+******************************/
+.distros {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+}
+
+.distro {
+    --distro-accent: var(--secondary);
+
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-colour);
+    margin: 0.5em;
+    padding: 1em;
+    width: 12em;
+    transition: border-color var(--btn-speed),
+                filter var(--btn-speed);
+
+    img {
+        height: 5em;
+        margin: 0 auto;
+        filter: brightness(0.8);
+        transition: filter var(--btn-speed);
+    }
+
+    span {
+        display: block;
+        margin: 1em auto 0.25em;
+        color: var(--grey-colour-light);
+        transition: color var(--btn-speed);
+    }
+
+    &:hover,
+    &:focus {
+        border-color: var(--distro-accent);
+        text-decoration: none;
+
+        img {
+            filter: none;
+        }
+
+        span {
+            color: var(--distro-accent);
+        }
+    }
+
+    &:active,
+    &.active {
+        background-color: var(--distro-accent);
+
+        img {
+            filter: drop-shadow(0px 0px 10px black);
+            transition: none;
+        }
+
+        span {
+            color: black;
+        }
+
+        /* Some logos contrast better with a 'mono' filter */
+        &#arch img,
+        &#debian img,
+        &#fedora img,
+        &#opensuse img,
+        &#manjaro img,
+        &#zorin img {
+            filter: grayscale(1) brightness(0.25);
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .distros {
+        justify-content: center;
+    }
+
+    .distro {
+        width: 8em;
+    }
+
+    .distro img {
+        height: 3.5em;
+    }
+}
+
+/* Badges */
+.distro.community {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "Community";
+        background: var(--border-colour);
+        color: white;
+        font-size: 0.7em;
+        position: absolute;
+        top: 1.5em;
+        right: -4.25em;
+        padding: 0.25em 4em;
+        transform: rotate(45deg);
+    }
+}
+
+.distro.detected {
+    animation: distro-detected 2s infinite;
+    border-radius: 5px;
+}
+
+@keyframes distro-detected {
+    0% {
+        box-shadow: 0px 0px 2px var(--distro-accent);
+    }
+    50% {
+        box-shadow: 0px 0px 10px var(--distro-accent);
+    }
+    100% {
+        box-shadow: 0px 0px 2px var(--distro-accent);
+    }
+}
+
+#unsupported-os {
+    background: var(--bg-secondary);
+    border: 1px solid var(--red);
+    display: flex;
+    margin: 1.75em;
+    animation: unsupported-glow 2s infinite;
+
+    img {
+        margin: auto 4em;
+        height: 5em;
+    }
+
+    h2 {
+        color: var(--red-light);
+    }
+}
+
+@keyframes unsupported-glow {
+    0% {
+        box-shadow: 0px 0px 2px var(--red);
+    }
+    50% {
+        box-shadow: 0px 0px 10px var(--red);
+    }
+    100% {
+        box-shadow: 0px 0px 2px var(--red);
+    }
+}
+
+.logo-legal {
+    font-size: 0.75em;
+    margin-top: 4em;
+
+    p {
+        margin: 0;
+    }
+}
+
+
+/************************************
+* Layout: Downloads / Instructions
+************************************/
+.download-page {
+    .distro-logo {
+        width: 100%;
+        padding: 2em;
+    }
+
+    .download-instructions img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .download-page .distro-logo {
+        padding: 1em;
+    }
+}
+
+@media (max-width: 540px) {
+    .download-page .distro-logo {
+        display: none;
+    }
+}
+
+.back-arrow {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    margin-top: 1.75em;
+
+    img {
+        position: absolute;
+        right: -1em;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    &:hover,
+    &:focus {
+        img {
+            opacity: 0.5;
+        }
+    }
+}
+
+.view-externally {
+    font-size: 0.8rem;
+
+    svg {
+        height: 0.9em;
+        width: 0.9em;
+        vertical-align: middle;
+        margin-left: 0.1em;
+        margin-right: 0.25em;
+
+        path {
+            fill: var(--primary);
+        }
+    }
+
+    &:hover {
+        svg path {
+            fill: var(--secondary);
+        }
+    }
+}
+
+
+/******************************
+* Layout: Features
+******************************/
+/* Desktop */
+@media (min-width: 541px) {
+    .feature {
+        display: flex;
+        flex-direction: row;
+        padding: 1em 0;
+        margin: 0;
+
+        &.last {
+            margin-bottom: 4em;
+        }
+    }
+
+    .feature-image-wrapper,
+    .feature-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .feature-image-wrapper {
+        img {
+            margin: auto;
+            width: 100%;
+            max-height: 12em;
+            max-width: 12em;
+            margin: 1em 0;
+
+            /* Align right */
+            margin-left: auto;
+            margin-right: 1em;
+        }
+    }
+
+    .feature-text-wrapper {
+        max-width: 540px;
+    }
+
+    .feature-title {
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    .feature-text {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 0;
+        margin-left: 0;
+        max-width: 360px;
+    }
+
+    .btn {
+        /* Align left */
+        margin-right: auto;
+    }
+
+    /* Alternating rows */
+    .feature:nth-of-type(even) {
+        background: var(--bg-secondary);
+    }
+
+    /* Feature page tweaks */
+    .feature.large {
+        .feature-image-wrapper {
+            img {
+                max-height: 24em;
+                max-width: 24em;
+            }
+        }
+
+        /* Swap sides for every other one */
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+
+            .feature-text-wrapper {
+                text-align: right;
+            }
+
+            .feature-text {
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+            .btn {
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+            .feature-image-wrapper img {
+                /* Align left */
+                margin-left: 1em;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+    .feature {
+        padding: 2em;
+
+        .feature-image-wrapper {
+            display: flex;
+        }
+
+        .feature-text-wrapper {
+            text-align: center;
+        }
+
+        img {
+            margin: auto;
+            width: 10em;
+        }
+
+        &.last {
+            margin-bottom: 2em;
+        }
+    }
+
+    .feature:nth-of-type(even) {
+        background: var(--bg-secondary);
+    }
+}
+
+
+/******************************
+* Layout: Image Box
+******************************/
+/* Desktop */
+@media (min-width: 541px) {
+    .image-box {
+        box-shadow: 0px 0px 0px var(--secondary);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        justify-content: stretch;
+        position: relative;
+        min-height: var(--image-box-min-height);
+        margin-bottom: 4em;
+        width: 100%;
+
+        .item {
+            flex-basis: 100%;
+
+            &:last-of-type .item-box {
+                border-bottom: none;
+            }
+
+            &:hover,
+            &:focus {
+                .item-box {
+                    background: linear-gradient(to right, rgba(0,128,0,0.5), rgba(0,0,0,0));
+                }
+            }
+        }
+
+        .item-box {
+            border-bottom: 1px solid var(--border-colour);
+            cursor: pointer;
+            padding: 8px;
+            width: 33%;
+        }
+
+        .item-title {
+            display: flex;
+            font-size: 1.1em;
+
+            span {
+                margin: auto 4px;
+            }
+        }
+
+        p {
+            color: var(--grey-colour-light);
+            margin-left: 2.25em;
+        }
+
+        .item-icon {
+            padding: 4px;
+            height: 32px;
+            width: 32px;
+        }
+
+        .image-box-radio:checked {
+            + .item {
+                .item-box {
+                    background: linear-gradient(to right, rgba(0,128,0,0.25), rgba(0,0,0,0));
+                }
+
+                + .image {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .image {
+            position: absolute;
+            left: 33%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            max-height: var(--image-box-min-height);
+            opacity: 0;
+            transition: opacity var(--page-speed);
+
+            img {
+                max-height: var(--image-box-min-height);
+                margin: auto;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+    .image-box {
+        .item-title {
+            display: flex;
+            color: var(--primary);
+            font-size: 1.1em;
+            text-align: center;
+            border-bottom: 1px solid var(--primary);
+            padding-bottom: 0.5em;
+
+            img {
+                height: 1.5em;
+                width: 1.5em;
+                margin-left: auto;
+            }
+
+            span {
+                margin: auto 0.5em;
+                margin-right: auto;
+            }
+        }
+
+        p {
+            text-align: center;
+            padding: 0 2em;
+            margin: 1em 0;
+        }
+
+        .image {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .item ~ .item .item-box {
+            margin-top: 2em;
+        }
+    }
+}
