@@ -1,0 +1,5 @@
+---
+permalink: /_headers
+---
+/assets/lib/*.ttf
+  Access-Control-Allow-Origin: *
