@@ -7,8 +7,6 @@ layout: default
         <h1 class="page-title">{{ page.title | escape }}</h1>
     </header>
 
-    {{ content }}
-
     <div id="unsupported-os" style="display:none" hidden>
         <img id="unsupported-os-img" src="/assets/img/platforms/windows.svg" alt="Windows logo"/>
         <div>
@@ -31,6 +29,8 @@ layout: default
                     <span>{{ page.distro_name }}</span>
                 </a>
             {% endfor %}
+
+            {{ content }}
         </div>
     </div>
 
