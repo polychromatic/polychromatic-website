@@ -8,7 +8,7 @@ distro_name: Gentoo
 distro_icon: gentoo.svg
 distro_accent: '158,149,247'
 community_package: true
-order: 50
+order: 5
 ---
 
 To install [sys-apps/polychromatic]:

@@ -8,7 +8,7 @@ distro_name: NixOS
 distro_icon: nixos.svg
 distro_accent: '82,119,195'
 community_package: true
-order: 45
+order: 6
 
 view_on_openrazer: https://openrazer.github.io/#nixos
 ---

@@ -9,7 +9,7 @@ distro_accent: '0,173,239'
 distro_icon: steamos.svg
 community_package: true
 legal: "Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries."
-order: 40
+order: 9
 ---
 
 While SteamOS is based on Arch, installing software isn't the same, due to the immutable root filesystem.

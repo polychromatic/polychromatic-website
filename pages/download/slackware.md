@@ -8,7 +8,7 @@ distro_name: Slackware
 distro_icon: slackware.svg
 distro_accent: '73,98,174'
 community_package: true
-order: 55
+order: 7
 
 view_on_openrazer: https://openrazer.github.io/#slackware
 ---
