@@ -46,9 +46,6 @@ sudo apt install polychromatic
     preview=preview
 %}
 
-If you wish to switch the branches later, go to [Software & Updates](https://wiki.ubuntu.com/SoftwareAndUpdatesSettings)
-→ **Other Software** tab.
-
 
 ### OpenRazer
 
