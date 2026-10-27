@@ -12,31 +12,32 @@ order: 2
 view_on_openrazer: https://openrazer.github.io/#fedora
 ---
 
+### Bazzite / Fedora Silverblue
+
+These immutable/atomic operating systems require the [Flatpak](/download/flatpak/) version.
+
+### Fedora
+
 To add the repository, open the Terminal:
 
-### Fedora 41 and later
+#### Fedora 41 and later
 ```shell
 sudo dnf config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
 sudo dnf install polychromatic
 ```
 
-### Fedora 40 and earlier
+#### Fedora 40 and earlier
 ```shell
 sudo dnf config-manager --add-repo https://openrazer.github.io/hardware:razer.repo
 sudo dnf install polychromatic
 ```
 
-### Fedora Rawhide
+#### Fedora Rawhide
 
 ```shell
 sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/hardware:/razer/Fedora_Rawhide/hardware:razer.repo
 sudo dnf install polychromatic
 ```
-
-### Fedora Silverblue
-
-See [Flatpak](/download/flatpak/).
-
 
 ### OpenRazer
 
